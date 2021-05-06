@@ -101,20 +101,95 @@
 									</tr>
 								</table></div>
 							</td>
-							<td background="images/szovegalj.gif" height="100%" valign="top">
+							<td  height="100%" valign="top">
 							<div align="left">
 							<table border="0" width="99%" id="table9" cellspacing="15" cellpadding="0">
 								<tr>
-									<td style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 4px" bordercolor="#B6A545" align="center">
+									<td style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 4px" bordercolor="#B6A545" align="left">
 									<p style="margin-top: 10px; margin-bottom: 5px">
 									<b><font  size="24px" face="Bahnschrift Condensed">A nagy Jókai kvíz</font></b></td>
+									
 									
 									
 								</tr>
 								<tr>
 									
 									<td >
+										<p>Jókai Mór születési helye?</p>
+										<input type="radio" id="Kom" name="elso" value="Kom" onclick="ac('a')">
+										<label for="Kom">Komárom</label><br>
+										<input type="radio" id="Gyor" name="elso" value="Gyor" onclick="ac('b')">
+										<label for="Gyor">Győr</label><br>
+										<input type="radio" id="Pest" name="elso" value="Pest" onclick="ac('c')">
+										<label for="Pest">Budapest</label>
+									</td>
+								</tr>
+								<tr>
 									
+									<td >
+										<p>Gimnáziumi tanulmányait ___________ folytatta.</p>
+										<input type="radio" id="Deb" name="masodik" value="Deb" onclick="bc('a')">
+										<label for="Deb">Debrecenben</label><br>
+										<input type="radio" id="Nagy" name="masodik" value="Nagy" onclick="bc('b')">
+										<label for="Nagy">Nagyváradon</label><br>
+										<input type="radio" id="Komár" name="masodik" value="Komár" onclick="bc('c')">
+										<label for="Komár">Komáromban</label>
+									</td>
+								</tr>
+								<tr>
+									
+									<td >
+										<p>Jókai barátságot kötött ___________ .</p>
+										<input type="radio" id="Csokonai" name="harm" value="Csokonai" onclick="cc('a')" >
+										<label for="Csokonai">Csokonai Vitéz Mihállyal</label><br>
+										<input type="radio" id="Petőfi" name="harm" value="Petőfi" onclick="cc('b')">
+										<label for="Petőfi">Petőfi Sándorral</label><br>
+										<input type="radio" id="Berzsenyi" name="harm" value="Berzsenyi" onclick="cc('c')">
+										<label for="Berzsenyi">Berzsenyi Dániellel</label>
+									</td>
+								</tr>
+								<tr>
+									
+									<td >
+										<p>1845-ben a nyári hónapokat _____________ töltötte.</p>
+										<input type="radio" id="Szilv" name="negy" value="Szilv" onclick="dc('a')">
+										<label for="Szilv">Szilvásváradon</label><br>
+										<input type="radio" id="Bal" name="negy" value="Bal" onclick="dc('b')">
+										<label for="Bal">Balatonfüreden</label><br>
+										<input type="radio" id="Komárom" name="negy" value="Komárom" onclick="dc('c')">
+										<label for="Komárom">Komáromban</label>
+									</td>
+								</tr>
+								<tr>
+									
+									<td >
+										<p>Szabadságharc leverése után Jókaiéknak sikerült egy Klapka-féle komáromi ______________ szereznie.</p>
+										<input type="radio" id="menet" name="ot" value="menet" onclick="ec('a')">
+										<label for="menet">menetlevelet</label><br>
+										<input type="radio" id="menl" name="ot" value="menl" onclick="ec('b')">
+										<label for="menl">menlevelet</label><br>
+										<input type="radio" id="menetsz" name="ot" value="menetsz" onclick="ec('c')">
+										<label for="menetsz">menetszelet</label>
+									</td>
+									
+								</tr>
+								<tr>
+									
+									<td >
+										<p>Hol hunyt el Jókai Mór?</p>
+										<input type="radio" id="Buda" name="hat" value="Buda" onclick="choose('a')">
+										<label for="Buda">Budapest</label><br>
+										<input type="radio" id="Nizza" name="hat" value="Nizza" onclick="choose('b')">
+										<label for="Nizza">Nizza</label><br>
+										<input type="radio" id="Komar" name="hat" value="Komar" onclick="choose('c')">
+										<label for="Komar">Komárom</label>
+									</td>
+								</tr>
+								<tr>
+									
+									<td >
+										<button onclick="ab(); bb(); cb(); db(); eb(); er(); test();end()">Eredmény</button>
+										<p id="fikusz"></p>
 									</td>
 								</tr>
 							</table>
@@ -130,6 +205,137 @@
 		
 	
 </div>
-<script type="text/javascript" src="Jokai.js"></script>
+<script type="text/javascript">
+var erde=0;
+var a;
+var b;
+var c;
+var d;
+var e;
+var f;
+
+
+function ac(choice){
+	a=choice;
+}
+function ab(){
+	if (a=='a'){
+		erde+=1;
+	}
+	else if (a=='b'){
+		erde+=0;
+	}
+	else if (a=='c'){
+		erde+=0;
+	}
+	
+}
+
+
+
+function bc(choice){
+	b=choice;
+}
+function bb(){
+	if (b=='a'){
+		erde+=0;
+	}
+	else if (b=='b'){
+		erde+=0;
+	}
+	else if (b=='c'){
+		erde+=1;
+	}
+	
+}
+
+
+
+
+
+function cc(choice){
+	c=choice;
+}
+function cb(){
+	if (c=='a'){
+		erde+=0;
+	}
+	else if (c=='b'){
+		erde+=1;
+	}
+	else if (c=='c'){
+		erde+=0;
+	}
+	
+}
+
+
+
+
+
+function dc(choice){
+	d=choice;
+}
+function db(){
+	if (d=='a'){
+		erde+=0;
+	}
+	else if (d=='b'){
+		erde+=0;
+	}
+	else if (d=='c'){
+		erde+=1;
+	}
+	
+}
+
+
+
+
+
+function ec(choice){
+	e=choice;
+}
+function eb(){
+	if (e=='a'){
+		erde+=0;
+	}
+	else if (e=='b'){
+		erde+=1;
+	}
+	else if (e=='c'){
+		erde+=0;
+	}
+	
+}
+
+
+
+function choose(choice){
+	f=choice;
+}
+function er(){
+	if (f=='a'){
+		erde+=1;
+	}
+	else if (f=='b'){
+		erde+=0;
+	}
+	else if (f=='c'){
+		erde+=0;
+	}
+	
+}
+
+function test(click){
+	var x=parseFloat((erde/6)*100).toFixed(1);
+	document.getElementById("fikusz").innerHTML ="Az általad elért pont "+erde+"/6 "+x+"%";
+	
+	}
+	function end() {
+
+		erde = 0;
+	}
+</script>
 </body>
 </html>
